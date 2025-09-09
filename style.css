@@ -1,0 +1,142 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: black;
+  color: white;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(0,0,0,0.7);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, blue, orange);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+header nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+header nav a:hover {
+  color: orange;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem 2rem 2rem;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #000, #001f3f);
+}
+.hero-text h1 span {
+  background: linear-gradient(45deg, blue, orange);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-img img {
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px orange;
+}
+
+.about, .resume, .projects, .skills, .contact {
+  padding: 5rem 2rem;
+  text-align: center;
+}
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.about-img img {
+  max-width: 300px;
+  border-radius: 20px;
+  animation: float 4s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.btn {
+  background: linear-gradient(45deg, blue, orange);
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: black;
+  font-weight: bold;
+  margin-right: 10px;
+  text-decoration: none;
+}
+.btn-outline {
+  border: 2px solid blue;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.project-card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 15px;
+  transition: transform 0.3s;
+}
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px blue;
+}
+
+.skills-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.skill {
+  padding: 15px 25px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.skill:hover {
+  background: linear-gradient(45deg, blue, orange);
+  color: black;
+}
+
+/* Scroll reveal effect */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(0,0,0,0.9);
+  font-size: 0.9rem;
+  color: gray;
+}
